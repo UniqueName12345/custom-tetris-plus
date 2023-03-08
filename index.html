@@ -41,24 +41,25 @@
 			resulting in a total of <strong>12 games in 1!</strong></p>
 			<button id="play">Play!</button>
 			<div id="attacker">
-				<span>Attacker: </span><select>
+				<span>Attacker: </span>
+				<select>
 					<option value="Human">Human</option>
 					<option value="AI">AI</option>
 					<option value="Random">Random</option>
-					<option value="Network">Network</option>
+					<option value="Network" disabled>Network</option> <!-- Disable the Network option -->
 				</select>
 			</div>
 			<div id="defender">
-				<span>Defender: </span><select>
+				<span>Defender: </span>
+				<select>
 					<option value="Human">Human</option>
 					<option value="AI">AI</option>
-					<option value="Network">Network</option>
+					<option value="Network" disabled>Network</option> <!-- Disable the Network option -->
 				</select>
 			</div>
+			
 			<p>This configuration is known as <strong id="description"></strong>.</p>
 			<p id="network"><button id="connect">Connect</button> https://<input type="text" id="server" size="8"/>.firebaseio.com/tetris/<input type="text" id="slug" size="5" /></p>
-			<footer>This contraption was made by <a href="http://ondras.zarovi.cz/">Ondřej Žára</a> for the <a href="https://github.com/github/game-off-2013">GitHub Game Off 2013</a> contest</footer>
-		</div>
 		<script>new Game.App();</script>
 		<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
 	</body>
