@@ -49,22 +49,6 @@ Game.Piece.DEF = {
 		color: "#c33",
 		avail: 3,
 		cells: [new XY(0, 0), new XY(-1, 0), new XY(1, 0), new XY(0, -1)]
-	},
-/***/
-	"-": {
-		color: "#fff",
-		avail: 3,
-		cells: [new XY(0, 0), new XY(-1, 0)]
-	},
-	"+": {
-		color: "#f9c",
-		avail: 2,
-		cells: [new XY(0, 0), new XY(-1, 0), new XY(1, 0), new XY(0, -1), new XY(0, 1)]
-	},
-	"u": {
-		color: "#963",
-		avail: 1,
-		cells: [new XY(0, 0), new XY(-1, 0), new XY(-1, 1), new XY(1, 0), new XY(1, -1)]
 	}
 }
 

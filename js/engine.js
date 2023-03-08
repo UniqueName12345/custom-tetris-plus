@@ -59,8 +59,8 @@ Game.Engine.prototype.drop = function(softDrop) {
 	var gravity = new XY(0, -1);
 
 	if (softDrop) {
-		// If softDrop is true, move the piece down by one cell
-		this._piece.xy = this._piece.xy.plus(gravity);
+		// If softDrop is true, move the piece down by three cells
+		this._piece.xy = this._piece.xy.plus(gravity.times(3));
 	} else {
 		// If SHIFT key is pressed along with DOWN arrow key, drop the piece to the bottom instantly
 		while (this._piece.fits(this.pit)) {
