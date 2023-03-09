@@ -130,16 +130,10 @@ Game.App.prototype._updateDescription = function() {
 	switch (key) {
 		case "Random-Human": str = "The Classic Tetris"; break;
 		case "Random-AI": str = "Sit and watch"; break;
-		case "Random-Network": str = "Sleeping on the job"; break;
 		case "AI-Human": str = "Bastet (Bastard Tetris)"; break;
 		case "AI-AI": str = "Clash of the Titans"; break;
-		case "AI-Network": str = "Playing Judas"; break;
 		case "Human-Human": str = "Local multiplayer"; break;
 		case "Human-AI": str = "Revenge!"; break;
-		case "Human-Network": str = "Multiplayer (attacker)"; break;
-		case "Network-Human": str = "Multiplayer (defender)"; break;
-		case "Network-AI": str = "The Mechanical Turk"; break;
-		case "Network-Network": str = "Observer mode"; break;
 	}
 
 	this._dom.description.innerHTML = str;
@@ -156,7 +150,6 @@ Game.App.prototype._start = function() {
 		this._engine = new Game.Engine();
 	} else {
 		var master = (this._select.defender.value != "Network");
-		this._engine = new Game.Engine.Network(this._firebase, master);
 	}
 	this._createDefender(this._select.defender.value);
 	this._createAttacker(this._select.attacker.value);
